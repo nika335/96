@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>racipes</title>
+</head>
+<body>
+    <h1>racipes</h1>
+    <ul>{%  for i in recipe %}</ul>
+            <li>
+                <a href="{% url 'wiev_recepies' i.name %}">{{i.name}}</a>
+            </li>
+        {% endfor %}    
+    <br>        
+    <form method="post">
+        {% csrf_token %}
+        <label>enter recepie for edit: </label>
+        <input type="text" name="name">
+        <input type="submit" value="submit">
+    </form>
+    <h2><a href="{% url 'add' %}">Add recepie</a></h2>
+</body>
+</html>

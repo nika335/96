@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit recepue</title>
+</head>
+<body>
+    <h1>edit {{note.name}} </h1>
+    <form method="post">
+        {% csrf_token %}
+        <ul>
+            <label>name</label>
+            <li><input type="text" name="name" required></li>
+            <br>
+            <label>ingredients</label>
+            <li><input type="text" name="ingredients" required></li>
+            <br>
+            <label>instructions</label>
+            <li><input type="text" name="instructions" required></li>
+            <br>
+            <input type="submit" value="edit note">
+        </ul>
+    </form>
+</body>
+</html>

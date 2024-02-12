@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add recipies</title>
+</head>
+<body>
+    <h1>Add new recipie</h1>
+    <form method="post">
+        {% csrf_token %}
+        <ul>
+            <label for="name">title</label>
+            <li><input type="text" name="name"></li>
+            <br>
+            <label for="ingredients">content</label>
+            <li><input type="text" name="ingredients"></li>
+            <br>
+            <label for="title">instructions</label>
+            <li><input type="text" name="instructions"></li>
+            <br>
+            <input type="submit" value="add recipie">
+        </ul>
+    </form>
+</body>
+</html>
